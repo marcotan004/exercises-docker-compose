@@ -3,4 +3,4 @@ services:
     image: devopsdockeruh/simple-web-service
     command: server
     ports:
-      - 8000:8000
+      - 8080:8080
