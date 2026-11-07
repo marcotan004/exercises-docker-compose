@@ -1,12 +1,10 @@
 services:
   frontend:
     image: example-frontend
-    build: ../example-app/frontend
     ports: 
       - 5001:5001
   backend:
     image: example-backend
-    build: ../example-app/backend
     environment:
       - REDIS_HOST=redis
     ports: 
