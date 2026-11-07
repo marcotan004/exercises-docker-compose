@@ -1,10 +1,10 @@
 services:
   frontend:
-    image: example-frontend
+    image: marcotan004/example-frontend
     ports: 
       - 5001:5001
   backend:
-    image: example-backend
+    image: marcotan004/example-backend
     environment:
       - REDIS_HOST=redis
     ports: 
