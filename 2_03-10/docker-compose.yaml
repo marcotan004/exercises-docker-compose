@@ -6,7 +6,7 @@ services:
     environment:
       - REDIS_HOST=redis
       - POSTGRES_HOST=db
-      - REQUEST_ORIGIN=http://localhost:5001
+      - REQUEST_ORIGIN=http://localhost:8000
   redis:
     image: redis:latest
     restart: unless-stopped
@@ -20,6 +20,9 @@ services:
     volumes:
       - ./database:/var/lib/postgresql
   nginx:
+    depends_on:
+      - frontend
+      - backend
     image: nginx
     ports:
     - 8000:80
